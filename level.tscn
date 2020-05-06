@@ -1,35 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/grass.png" type="Texture" id=2]
 [ext_resource path="res://assets/Toon Road Texture.png" type="Texture" id=3]
 [ext_resource path="res://assets/vignette.png" type="Texture" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
-
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
-
-uniform bool apply = true;
-uniform float amount = 1.0;
-uniform sampler2D offset_texture : hint_white;
-
-void fragment() {
-	vec4 texture_color = texture(TEXTURE, UV);
-	vec4 color = texture_color;
-	
-	if (apply == true) {
-		float adjusted_amount = amount * texture(offset_texture, UV).r / 100.0;
-		color.r = texture(TEXTURE, vec2(UV.x + adjusted_amount, UV.y)).r;
-		color.g = texture(TEXTURE, UV).g;
-		color.b = texture(TEXTURE, vec2(UV.x - adjusted_amount, UV.y)).b;
-	}
-	COLOR = color;
-}"
-
-[sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
-shader_param/apply = true
-shader_param/amount = 0.0
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -58,24 +33,26 @@ position = Vector2( 210, 142 )
 motion_mirroring = Vector2( 0, 1900 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
-margin_left = 370.634
-margin_top = 551.328
-margin_right = 2370.63
-margin_bottom = 1891.33
+margin_left = -104.791
+margin_top = 1141.32
+margin_right = 1895.21
+margin_bottom = 2481.32
 rect_rotation = -89.9999
-rect_pivot_offset = Vector2( 1083.42, 365.097 )
+rect_pivot_offset = Vector2( 1028.37, -165.368 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
-material = SubResource( 2 )
-margin_left = 1091.93
-margin_top = 4.43457
-margin_right = 1131.93
-margin_bottom = 44.4346
-rect_rotation = 89.9999
-rect_scale = Vector2( 80.7803, 45.5136 )
+margin_left = -2176.77
+margin_top = 2603.99
+margin_right = -176.771
+margin_bottom = 3336.99
+rect_rotation = -89.9999
+rect_scale = Vector2( 2.5, 2.5 )
+rect_pivot_offset = Vector2( 1028.37, -165.368 )
 texture = ExtResource( 3 )
-expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
