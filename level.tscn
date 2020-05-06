@@ -78,14 +78,17 @@ motion_mirroring = Vector2( 0, 3228.41 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
 material = SubResource( 2 )
-margin_left = 1100.8
-margin_top = -2.50294e-10
-margin_right = 1140.8
-margin_bottom = 40.0
+margin_left = 1137.11
+margin_top = 1.91211
+margin_right = 13924.1
+margin_bottom = 4689.91
 rect_rotation = 89.9999
-rect_scale = Vector2( 80.7803, 45.5136 )
+rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
-expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="window" type="CanvasLayer" parent="."]
 
@@ -99,11 +102,14 @@ rect_scale = Vector2( 16.2345, 9.55597 )
 texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="window"]
-margin_left = 445.124
-margin_top = 17.1741
-margin_right = 514.124
-margin_bottom = 48.1741
+margin_left = 275.037
+margin_top = 18.953
+margin_right = 344.037
+margin_bottom = 52.953
 rect_scale = Vector2( 1.82041, 1.82041 )
 text = "DAO CHE
 REVERSE"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
