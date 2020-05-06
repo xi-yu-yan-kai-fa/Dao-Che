@@ -58,12 +58,27 @@ position = Vector2( 210, 142 )
 motion_mirroring = Vector2( 0, 1900 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
-margin_left = 1088.95
-margin_top = 1999.84
-margin_right = 3088.95
-margin_bottom = 3339.84
+margin_left = 370.634
+margin_top = 551.328
+margin_right = 2370.63
+margin_bottom = 1891.33
 rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 1083.42, 365.097 )
 texture = ExtResource( 2 )
+
+[node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
+material = SubResource( 2 )
+margin_left = 1091.93
+margin_top = 4.43457
+margin_right = 1131.93
+margin_bottom = 44.4346
+rect_rotation = 89.9999
+rect_scale = Vector2( 80.7803, 45.5136 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
 margin_left = -2055.87
@@ -72,23 +87,12 @@ margin_right = -55.8689
 margin_bottom = 3339.84
 rect_rotation = -89.9999
 texture = ExtResource( 2 )
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 0, 3228.41 )
-
-[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
-material = SubResource( 2 )
-margin_left = 1137.11
-margin_top = 1.91211
-margin_right = 13924.1
-margin_bottom = 4689.91
-rect_rotation = 89.9999
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 3 )
-stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 0, 3228.41 )
 
 [node name="window" type="CanvasLayer" parent="."]
 

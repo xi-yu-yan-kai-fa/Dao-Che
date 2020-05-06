@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed_max = 150 #the maximum speed
+var speed_max = 300 #the maximum speed
 var s = 0 #the actual speed
 onready var car = preload("res://car_enemi.tscn")
 
@@ -23,7 +23,7 @@ func _process(delta):
 	get_node("../window/vignette").modulate = Color(1,1,1,1 * x / 100) #set the modulate's alpha value of the vignette screen border effect texture 
 	$Sprite.scale.y = 1 + (0.1 * x / 100) #set the scale.y value  
 	$Sprite.get_material().set_shader_param("amount",3 * x / 100) #set the shader parameter "amount" for the chromatic aberation
-	get_node("../ParallaxBackground/ParallaxLayer/TextureRect").get_material().set_shader_param("amount",1.5 * x / 100)
+#	get_node("../ParallaxBackground/ParallaxLayer/TextureRect").get_material().set_shader_param("amount",1.5 * x / 100)
 	print(str(int(x)) + "% of the maximum speed")
 
 #side cars spawn
